@@ -1,3 +1,5 @@
+**NOTE: FULL PROJECT IS IN THE MASTER BRANCH**
+
 **Energy Management System**
 
 **Overview**
