@@ -1,0 +1,54 @@
+Energy Management System  Project Requirements
+
+ Functional Requirements
+1. Log Management: The system must allow the creation, movement, deletion, and archiving of log files.
+Each log file should be associated with a specific charging station and energy source (e.g., solar, wind, etc.).
+Log files should be created daily for each energy source and station.
+Log files older than a specified number of days should be archived into a separate directory.
+The system should track the metadata for each log file operation (e.g., creation time, modification time, file size).
+
+2. Data Exchange Simulation: The system must simulate data exchange using both byte and character streams.
+It should allow the reading and writing of energy data into log files in the appropriate format.
+Energy data must be logged for different energy sources and charging stations.
+Energy data must be appended to the existing log files without overwriting previous entries.
+
+3. User Interaction: The system should allow the user to search for log files based on:
+a. Equipment name (e.g., solar station, wind station).
+b. Date (e.g., log files from a specific day).
+    
+The system must use regular expressions to search for log files efficiently.
+The user must be able to open and view the contents of a specific log file based on their search query.
+The system should display appropriate messages when log files are not found or when incorrect search queries are entered.
+
+4. Metadata Management: The system must maintain metadata for each file operation (create, move, delete, archive).
+Metadata should track the following for each log file:
+a. Creation date and time.
+b. Last modification date and time.
+c. File size.
+    
+Metadata should be printed in the console or written to a separate metadata log file whenever an operation is performed.
+
+ NonFunctional Requirements
+1. Performance: The system should handle log files efficiently, even as the number of files grows over time. The search functionality must be optimized using regular expressions to quickly find relevant logs.
+
+2. Scalability: The system should be able to manage log files from multiple energy sources and charging stations, with the possibility of adding more energy sources in the future.
+
+3. Reliability: The system must handle exceptions (e.g., file not found, I/O errors) gracefully and provide meaningful error messages. File operations must be reliable, ensuring that log data is not lost during operations such as archiving or deletion.
+
+4. Maintainability: The code should be modular and organized, with clear separation between the log management, data exchange, and user interaction functionalities. The system should be easy to extend, allowing new features (e.g., additional file operations, data types) to be added without major changes to the core logic.
+
+ System Constraints
+ The system must be implemented using Java.
+ The project should follow standard Java I/O operations, particularly focusing on byte and character streams.
+ The system must use regular expressions for file searching as required by the assignment.
+ The system should be run on local storage, and log files will be stored in the user's file system.
+
+ Documentation
+ The project must include a README file that explains the project setup, task distribution, and how to run the system.
+ The project must include this requirements document that outlines the functional and nonfunctional expectations.
+
+ Tools and Environment
+ Programming Language: Java 8 or higher
+ Development Environment: Eclipse
+ File System: The system should have access to a directory for storing log files
+ Regular Expressions: Java’s builtin regular expression support (java.util.regex package) should be used for searching log files.
